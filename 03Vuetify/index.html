@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+<div id="app">
+    <v-app>
+        <!--ツールバー-->
+        <v-toolbar clipped="true">
+            <v-toolbar-side-icon></v-toolbar-side-icon>
+            <v-toolbar-title>Title</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-toolbar-items class="hidden-sm-and-down">
+                <v-btn flat>Link One</v-btn>
+                <v-btn flat>Link Two</v-btn>
+                <v-btn flat>Link Three</v-btn>
+            </v-toolbar-items>
+        </v-toolbar>
+
+        <v-content>
+
+            <!--ハローワールド-->
+            <v-container>Hello world</v-container>
+
+            <!--カードサンプル-->
+            <v-layout>
+                <v-flex xs12 sm6 offset-sm3>
+                    <v-card>
+                        <v-card-media
+                                src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+                                height="200px"
+                        ></v-card-media>
+
+                        <v-card-title primary-title>
+                            <div>
+                                <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
+                                <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, ...</div>
+                            </div>
+                        </v-card-title>
+
+                        <v-card-text>
+                            <v-flex xs12 sm6 md3>
+                                <v-text-field label="userId">
+                                </v-text-field>
+                                <v-text-field label="password">
+                                </v-text-field>
+                            </v-flex>
+                        </v-card-text>
+
+                        <v-card-actions>
+
+                            <v-btn flat color="primary">Share</v-btn>
+                            <v-btn flat color="orange">Explore</v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-flex>
+            </v-layout>
+
+
+        </v-content>
+        <v-footer>Design by hoge.</v-footer>
+    </v-app>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+<script>
+    new Vue({
+        el: '#app' ,
+        data: {
+            card_text: 'Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat.'
+        }
+    })
+</script>
+</body>
+</html>
