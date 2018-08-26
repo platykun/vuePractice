@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    テキストのバインディング
+    (console.log(app.message)によって外部からアクセス可能)
+    <p>{{message}}</p>
+
+    データの繰り返し表示(配列をv-forで表示)
+    (app.fruits.push('orange')によってリストに要素追加)
+    <ol>
+        <li v-for="fruit in fruits">{{fruit}}</li>
+    </ol>
+
+    ボタンクリック時のイベントをハンドリング
+    <button v-on:click="handleClick">Click</button>
+    <p>{{ count }}</p>
+    <br>
+
+    フォームと入力の同期
+    <p>{{formParam}}</p>
+    <input v-model="formParam">
+    <br>
+
+    分岐(v-if)
+    <input v-model="isShow">
+    <br>
+    <p v-if="isShow">isShow is true</p>
+
+    属性へのバインド(p57) v-bind: もしくは　:を付与する
+    <br>
+    <input type="text" :value="message"><br>
+
+    データの内容をjson形式で出力
+    <pre>{{ $data }}</pre>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
